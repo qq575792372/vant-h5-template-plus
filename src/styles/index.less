@@ -1,0 +1,172 @@
+/**
+ * index
+ * 样式入口，引入其他所有基础style的定义，并提供一些公用的css
+ */
+
+@import "./variables.less";
+@import "./transition.less";
+@import "./mixins.less";
+@import "./util.less";
+
+html,
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #f5f7f9;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+label {
+  font-weight: 500;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  min-height: auto;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+// 清空内边距
+.no-padding {
+  padding: 0px !important;
+}
+
+/* 清除浮动 */
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+
+/* 文字颜色样式 */
+.text-primary {
+  color: @text-primary-color;
+}
+.text-success {
+  color: @text-success-color;
+}
+.text-warning {
+  color: @text-warning-color;
+}
+.text-error {
+  color: @text-error-color;
+}
+.text-title {
+  color: @text-title-color;
+}
+.text-content {
+  color: @text-content-color;
+}
+.text-desc {
+  color: @text-desc-color;
+}
+.text-disabled {
+  color: @text-disabled-color;
+}
+
+/* 错误异常页面样式 */
+.error-container {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  align-items: center;
+  min-height: 640px;
+  .error-image {
+    width: 430px;
+    height: 430px;
+    max-width: 100%;
+  }
+  .error-content {
+    padding-left: 80px;
+    h1 {
+      color: @text-normal-color;
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 72px;
+      margin-bottom: 16px;
+    }
+    .desc {
+      color: @text-desc-color;
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+/* 框架标准的列表页面样式 */
+.app-container {
+  .main-container {
+    background: #fff;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 2px;
+    // header-放查询条件以及操作按钮
+    .header-box {
+      // 查询条件
+      .search-box {
+        .ivu-input-wrapper,
+        .ivu-select,
+        .ivu-btn {
+          margin-right: 8px;
+          margin-bottom: 5px;
+        }
+        .ivu-date-picker {
+          margin-right: 8px;
+        }
+      }
+      // 操作按钮
+      .operate-box {
+        margin-top: 10px;
+        text-align: right;
+        .ivu-btn {
+          margin-right: 8px;
+        }
+      }
+    }
+    // table-表格列表
+    .table-box {
+      margin-top: 10px;
+    }
+    // pagination-分页
+    .pagination-box {
+      text-align: right;
+      padding-top: 10px;
+    }
+  }
+}

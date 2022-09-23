@@ -1,0 +1,11 @@
+build/*.js
+mock/*.js
+
+# 忽略src下指定目录所有文件
+src/assets
+src/icons/*
+src/vendor/*
+
+.vscode
+public
+dist

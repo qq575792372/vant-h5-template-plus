@@ -1,0 +1,28 @@
+/**
+ * mixins
+ * 混入的样式，例如一些全局额外的，比如滚动条自定义，placeholder自定义样式等等
+ */
+
+/*
+ * 滚动条的样式
+ */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 16px;
+}
+// 滚动条内部条样式
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: solid 4px transparent;
+  background-clip: padding-box;
+  background-color: rgba(81, 90, 110, 0.3);
+}
+// 滚动条内部条hover样式
+::-webkit-scrollbar-thumb:hover {
+  border-color: #ebecf1;
+  background-color: rgba(81, 90, 110, 0.4);
+}
+// 滚动条内部条点击样式
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(81, 90, 110, 0.6);
+}
