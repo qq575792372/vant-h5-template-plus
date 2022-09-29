@@ -42,6 +42,16 @@ export default defineConfig(({ command, mode }) => {
 
     /* css配置 */
     css: {
+      // px转rem
+      postcss: {
+        plugins: [
+          require("postcss-pxtorem")({
+            rootValue: 37.5, // 540*960 设计稿
+            selectorBlackList: [], // 忽略转换正则匹配项
+            propList: ["*"],
+          }),
+        ],
+      },
       preprocessorOptions: {
         less: {
           modifyVars: {},
@@ -67,7 +77,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue(),
       vueJsx(),
-      // eslint校验，在development环境起作用
+      // eslint校验，在development开发模式下起作用
       mode === "development" &&
         eslintPlugin({
           // lintOnStart: true, // 启动时候是否执行eslint校验

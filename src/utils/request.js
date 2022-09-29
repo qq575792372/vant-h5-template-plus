@@ -1,6 +1,6 @@
 import axios from "axios";
 import store from "@/store";
-import { Message } from "view-design";
+import { Toast } from "vant";
 import { getToken } from "@/utils/token";
 
 // 设置axios跨域访问
@@ -9,7 +9,7 @@ axios.defaults.crossDomain = true; // 设置axios跨域的配置
 
 // 创建服务
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_SERVE + process.env.VUE_APP_BASE_API,
+  baseURL: import.meta.env.VITE_BASE_SERVE + import.meta.env.VITE_BASE_API,
   timeout: 3 * 60 * 1000,
 });
 
@@ -54,9 +54,9 @@ let errorMsgInstance = null;
 let errorMsgTimer = null;
 function onceErrorMsg(errorMsg, interval = 3 * 1000) {
   if (errorMsgInstance) {
-    Message.destory();
+    Toast.clear();
   } else {
-    errorMsgInstance = Message.error(errorMsg);
+    errorMsgInstance = Toast(errorMsg);
   }
   errorMsgTimer && clearTimeout(errorMsgTimer);
   errorMsgTimer = setTimeout(() => {

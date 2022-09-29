@@ -12,6 +12,11 @@ export const constantRoutes = [
     name: "Home",
     component: () => import("@/views/home/index"),
   },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("@/views/login/index"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

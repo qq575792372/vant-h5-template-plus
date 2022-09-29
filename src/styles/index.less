@@ -15,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background: #f5f7f9;
+  color: @text-content-color;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
@@ -114,7 +115,7 @@ div:focus {
   .error-content {
     padding-left: 80px;
     h1 {
-      color: @text-normal-color;
+      color: @text-content-color;
       font-size: 72px;
       font-weight: 600;
       line-height: 72px;
@@ -131,6 +132,7 @@ div:focus {
 
 /* 框架标准的列表页面样式 */
 .app-container {
+  font-size: 14px;
   .main-container {
     background: #fff;
     margin: 12px;

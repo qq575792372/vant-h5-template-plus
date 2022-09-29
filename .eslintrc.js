@@ -35,5 +35,6 @@ module.exports = {
     "vue/return-in-computed-property": "off", // vue忽略函数必须返回值
     "vue/multi-word-component-names": "off", // vue忽略文件名建议的短横单词分割
     "vue/no-reserved-component-names": "off", // vue忽略不能使用html标签当组件名的规则
+    "vue/comment-directive": "off",
   },
 };
