@@ -10,8 +10,8 @@ module.exports = {
   },
   parser: "vue-eslint-parser",
   parserOptions: {
+    ecmaVersion: 2022, // 使用的 ECMAScript  版本
     sourceType: "module",
-    ecmaVersion: 2022, // 限制 ECMA Script的版本
     ecmaFeatures: {
       jsx: true, // 开启jsx模板支持
     },
