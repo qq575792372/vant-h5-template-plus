@@ -44,10 +44,19 @@
     "vue-eslint-parser": "^9.1.0"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx,vue}": [
-      "eslint  --ext .js,.vue src",
+    "*.{js,ts,tsx,jsx,vue}": [
+      "eslint --fix",
       "prettier --write",
       "git add"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
     ]
   },
   "engines": {
