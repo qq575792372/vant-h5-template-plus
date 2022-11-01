@@ -44,7 +44,7 @@
     "vue-eslint-parser": "^9.1.0"
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{js,ts,jsx,tsx,vue}": [
       "eslint --fix --ext .js,.vue src",
       "prettier --write",
       "git add"
