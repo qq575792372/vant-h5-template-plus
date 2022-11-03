@@ -4,7 +4,7 @@
   "description": "基于Vue3+Vite+Pnpm+Vant3+Pinia+Vue-Router的开源的移动端模板，只包含基础的功能。",
   "author": "Gaoshiwei<575792372@qq.com>",
   "scripts": {
-    "start": "pnpm run dev",
+    "start": "pnpm dev",
     "dev": "vite",
     "stage": "vite --mode staging",
     "prod": "vite --mode production",

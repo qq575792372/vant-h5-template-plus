@@ -12,7 +12,7 @@ const CWD = process.cwd();
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, CWD);
   return {
-    base: "/vant-test", // 打包和路由访问的路径，例如：/my-demo
+    base: "/", // 打包和路由访问的路径，例如：/my-demo
 
     /* server配置 */
     server: {
@@ -21,12 +21,12 @@ export default defineConfig(({ command, mode }) => {
       open: true,
       // 配置反向代理
       proxy: {
-        [env.VITE_BASE_API]: {
+        [env.VITE_APP_BASE_API]: {
           // 代理的地址
           target: "http://192.168.0.10:8080",
           changeOrigin: true,
           rewrite: (path) =>
-            path.replace(new RegExp(`^${env.VITE_BASE_API}`, "g"), "/"),
+            path.replace(new RegExp(`^${env.VITE_APP_BASE_API}`, "g"), "/"),
         },
       },
     },

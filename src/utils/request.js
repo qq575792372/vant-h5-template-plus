@@ -9,7 +9,8 @@ axios.defaults.crossDomain = true; // 设置axios跨域的配置
 
 // 创建服务
 const service = axios.create({
-  baseURL: import.meta.env.VITE_BASE_SERVE + import.meta.env.VITE_BASE_API,
+  baseURL:
+    import.meta.env.VITE_APP_BASE_SERVE + import.meta.env.VITE_APP_BASE_API,
   timeout: 3 * 60 * 1000,
 });
 

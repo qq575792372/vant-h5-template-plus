@@ -21,6 +21,7 @@ module.exports = {
         "test", // 添加或修改测试
         "perf", // 提高性能的改动
         "chore", // 修改 src 或者 test 的其余修改，例如构建过程或辅助工具的变动
+        "ci", // CI 配置，脚本文件等改动
       ],
     ],
     // subject 大小写不做校验

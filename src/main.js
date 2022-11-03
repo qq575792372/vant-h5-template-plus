@@ -25,7 +25,7 @@ import "amfe-flexible";
 
 // 挂载全局变量
 app.config.globalProperties.$baseUrl =
-  import.meta.env.VITE_BASE_SERVE + import.meta.env.VITE_BASE_API;
+  import.meta.env.VITE_APP_BASE_SERVE + import.meta.env.VITE_APP_BASE_API;
 
 // 挂载实例
 app.mount("#app");
