@@ -1,0 +1,8 @@
+module.exports = {
+  tabWidth: 2,
+  useTabs: false,
+  printWidth: 80,
+  eslintIntegration: true,
+  endOfLine: "auto",
+  htmlWhitespaceSensitivity: "ignore",
+};
