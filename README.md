@@ -121,3 +121,9 @@ git commit -m 'docs: 更新了自定义组件文档'
 `Husky` 是 git 提交的 hooks 钩子工具。  
 `Lint-Staged` 插件会监测暂存区的代码，通过了则允许提交。  
 `Commitlint` 用来监测 git 提交的信息规范。
+
+## 其他
+
+#### 1. 第三方工具库
+
+使用了 [lime-util](https://github.com/qq575792372/lime-util) 是一个 前端模块化 JavaScript 工具库，包含了开发中经常用到的一些模块方法集合，如字符串，数组，浏览器缓存，浏览器 Cookie，Dom 处理，日期工具，数学计算，文件处理，正则校验，微信小程序工具库等等
