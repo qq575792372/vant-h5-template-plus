@@ -4,7 +4,7 @@ import { resolve } from "path";
 // vite插件
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import eslintPlugin from "vite-plugin-eslint";
+import vitePluginEslint from "vite-plugin-eslint";
 
 // 当前目录路径
 const CWD = process.cwd();
@@ -79,7 +79,7 @@ export default defineConfig(({ command, mode }) => {
       vueJsx(),
       // eslint校验，在development开发模式下起作用
       mode === "development" &&
-        eslintPlugin({
+        vitePluginEslint({
           // lintOnStart: true, // 启动时候是否执行eslint校验
         }),
     ],

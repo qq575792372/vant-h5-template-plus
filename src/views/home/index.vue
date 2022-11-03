@@ -11,7 +11,6 @@
       </van-button>
     </div>
 
-    <!-- <div v-for="item in 2"></div> -->
     <!-- 演示如何跳转页面 -->
     <div class="margin-top-20">
       <van-button type="primary" @click="toLogin">跳转到登陆</van-button>
