@@ -13,7 +13,9 @@
 
     <!-- 演示如何跳转页面 -->
     <div class="margin-top-20">
-      <van-button type="primary" @click="toLogin">跳转到登陆</van-button>
+      <van-button :id="1" type="primary" @click="toLogin">
+        跳转到登陆
+      </van-button>
     </div>
   </div>
 </template>

@@ -9,6 +9,7 @@ import vitePluginEslint from "vite-plugin-eslint";
 // 当前目录路径
 const CWD = process.cwd();
 
+// vite配置
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, CWD);
   return {
@@ -80,7 +81,7 @@ export default defineConfig(({ command, mode }) => {
       // eslint校验，在development开发模式下起作用
       mode === "development" &&
         vitePluginEslint({
-          // lintOnStart: true, // 启动时候是否执行eslint校验
+          // lintOnStart: true, // 启动时候是否就执行eslint校验，如果开启的话有eslint的报错则服务是会启动失败
         }),
     ],
   };
