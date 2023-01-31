@@ -1,0 +1,16 @@
+{
+  /* eslint配置 */
+  "eslint.enable": true, // 是否开启eslint
+  "eslint.alwaysShowStatus": true, // 底部eslint状态栏显示
+  // code代码保存时，自动eslint修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "html", "vue", "vue-html"],
+
+  /* 格式化配置 */
+  // 编辑器格式化
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false
+}
