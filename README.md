@@ -9,7 +9,7 @@
 git clone https://github.com/qq575792372/vant-h5-template-plus.git
 
 # 进入项目目录
-cd ivu-admin-pro
+cd vant-h5-template-plus
 
 # 安装依赖
 pnpm i
@@ -25,6 +25,15 @@ pnpm dev --port=8000
 
 # 支持stage环境启动
 pnpm stage
+```
+
+```bash
+# 查看源
+pnpm get registry
+# 切换淘宝源
+pnpm config set registry https://registry.npm.taobao.org
+#切换默认源
+pnpm config set registry https://registry.npmjs.org
 ```
 
 服务启动成功后，浏览器访问 [http://localhost:9000](http://localhost:9000)

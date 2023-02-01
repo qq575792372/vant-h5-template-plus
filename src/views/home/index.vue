@@ -6,16 +6,12 @@
     <!-- 演示如何和store交互 -->
     <div class="display-flex">
       <van-field v-model="userName" class="flex-1" placeholder="输入新姓名" />
-      <van-button type="primary" style="width: 90px" @click="handleClick">
-        保存
-      </van-button>
+      <van-button type="primary" style="width: 90px" @click="handleClick">保存</van-button>
     </div>
 
     <!-- 演示如何跳转页面 -->
     <div class="margin-top-20">
-      <van-button :id="1" type="primary" @click="toLogin">
-        跳转到登陆
-      </van-button>
+      <van-button :id="1" type="primary" @click="toLogin">跳转到登陆</van-button>
     </div>
   </div>
 </template>

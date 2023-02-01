@@ -16,11 +16,7 @@ module.exports = {
       jsx: true, // 开启jsx模板支持
     },
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:vue/vue3-recommended",
-    "plugin:prettier/recommended",
-  ],
+  extends: ["eslint:recommended", "plugin:vue/vue3-recommended", "plugin:prettier/recommended"],
   rules: {
     /* 常规规则 */
     "spaced-comment": [2, "always"], // 注释后面必须写两个空格
