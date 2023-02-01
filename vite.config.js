@@ -26,8 +26,7 @@ export default defineConfig(({ command, mode }) => {
           // 代理的地址
           target: "http://192.168.0.10:8080",
           changeOrigin: true,
-          rewrite: (path) =>
-            path.replace(new RegExp(`^${env.VITE_APP_BASE_API}`, "g"), "/"),
+          rewrite: (path) => path.replace(new RegExp(`^${env.VITE_APP_BASE_API}`, "g"), "/"),
         },
       },
     },
