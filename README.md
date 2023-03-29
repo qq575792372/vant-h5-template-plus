@@ -30,8 +30,8 @@ pnpm stage
 ```bash
 # 查看源
 pnpm get registry
-# 切换淘宝源
-pnpm config set registry https://registry.npm.taobao.org
+# 切换淘宝新镜像源
+pnpm config set registry https://registry.npmmirror.com
 #切换默认源
 pnpm config set registry https://registry.npmjs.org
 ```
