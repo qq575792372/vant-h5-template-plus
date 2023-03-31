@@ -5,6 +5,7 @@ import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vitePluginEslint from "vite-plugin-eslint";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // 当前目录路径
 const CWD = process.cwd();
@@ -23,10 +24,14 @@ export default defineConfig(({ command, mode }) => {
       // 配置反向代理
       proxy: {
         [env.VITE_APP_BASE_API]: {
-          // 代理的地址
           target: "http://192.168.0.10:8080",
           changeOrigin: true,
           rewrite: (path) => path.replace(new RegExp(`^${env.VITE_APP_BASE_API}`, "g"), "/"),
+        },
+        ["/file-api"]: {
+          target: "http://192.168.0.10:8080",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/file-api/, ""),
         },
       },
     },
@@ -36,6 +41,7 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         "~": resolve("./"),
         "@": resolve("./src"),
+        "@c": resolve("./src/components"),
       },
       extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
     },
@@ -77,6 +83,12 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue(),
       vueJsx(),
+      createSvgIconsPlugin({
+        // 指定需要缓存的图标文件夹
+        iconDirs: [resolve(process.cwd(), "src/icons")],
+        // 指定symbolId格式
+        symbolId: "svg-icon-[dir]-[name]",
+      }),
       // eslint校验，在development开发模式下起作用
       mode === "development" &&
         vitePluginEslint({

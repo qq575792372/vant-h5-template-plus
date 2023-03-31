@@ -23,6 +23,11 @@ import "@/styles/index.less";
 // 引入 amfe-flexible
 import "amfe-flexible";
 
+// 挂载全局组件
+import "virtual:svg-icons-register";
+import SvgIcon from "@/components/SvgIcon/index.vue";
+app.component("SvgIcon", SvgIcon);
+
 // 挂载全局变量
 app.config.globalProperties.$baseUrl = import.meta.env.VITE_APP_BASE_SERVE + import.meta.env.VITE_APP_BASE_API;
 

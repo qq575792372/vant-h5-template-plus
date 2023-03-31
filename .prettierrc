@@ -2,7 +2,9 @@
   "tabWidth": 2,
   "useTabs": false,
   "printWidth": 120,
-  "eslintIntegration": true,
+  "singleQuote": false,
+  "semi": true,
   "endOfLine": "auto",
+  "eslintIntegration": true,
   "htmlWhitespaceSensitivity": "ignore"
 }

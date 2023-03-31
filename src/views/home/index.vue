@@ -8,6 +8,10 @@
       <van-field v-model="userName" class="flex-1" placeholder="输入新姓名" />
       <van-button type="primary" style="width: 90px" @click="handleClick">保存</van-button>
     </div>
+    <div>
+      图标：
+      <SvgIcon name="user" size="20" style="color: #2d8cf0" />
+    </div>
 
     <!-- 演示如何跳转页面 -->
     <div class="margin-top-20">
